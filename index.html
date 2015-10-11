@@ -16,7 +16,7 @@
 		<link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
 		<!-- Automatically refresh every 10 seconds -->
-		<meta http-equiv="refresh" content="10" />
+		<meta http-equiv="refresh" content="60" />
 
 		<!-- Custom styles for this template -->
 		<link href="theme.css" rel="stylesheet">
@@ -34,7 +34,10 @@
 			<div class="jumbotron">
 				<h1>IEEEXtreme Programming 9.0</h1>
 				<h2>Contest will start in: <span id="countdown"></span></h2>
-<!-- 				<h2> Pizza is Here</h2>
+				
+			</div>
+			<div id="noticeboard">
+ 				<!--<h2> Pizza is Here</h2>
 				<h3> Get it now in the cafe</h3>
 				<p>Breakfast is in Cafe now</p>
 				<p>Try out your login details and make sure you've taken your toilet breaks</p> -->
@@ -51,6 +54,9 @@
 				
 				</div>
 			</footer>
+			
+			<a class="twitter-timeline" href="https://twitter.com/hashtag/ieeextreme" data-widget-id="653128962277707777">#ieeextreme Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				
 
 
@@ -66,6 +72,11 @@
 		<script src="assets/js/holder.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
+				var auto_refresh = setInterval(function(){
+				$('#noticeboard').load(document.URL +  ' #noticeboard').fadeIn("slow");
+					 
+				   /// call your function here
+				}, 5000);
 				// set the date we're counting down to
 				// Set the IEEE Xtreme Programming Competition End date
 				var target_date = new Date("13:00 Oct 24, 2015").getTime();
@@ -99,7 +110,10 @@
 				// update the tag with id "countdown" every 1 second
 				setInterval(start_counting, 1000);
 				start_counting();
+				
+
 			});
+			
 		</script>
 	</body>
 </html>

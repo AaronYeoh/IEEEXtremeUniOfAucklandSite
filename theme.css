@@ -12,12 +12,17 @@ body {
 }
 
 #mate-logo{
-    margin-top: -20px;
+	margin-top: -20px;
 }
 
 #ieee-logo{
-	margin-top: -10px;
+	margin-top: -20px;
 	
+	
+}
+
+#abb-logo{
+	margin-top: -8px;
 }
 
 #twitter-widget-0{

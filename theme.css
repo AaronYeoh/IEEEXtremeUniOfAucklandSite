@@ -25,19 +25,25 @@ body {
 	margin-top: -8px;
 }
 
-#twitter-widget-0{
+/* #twitter-widget-0{
 	/*margin-top: -20px !important;*/
-	max-height: 300px !important;
+	/*max-height: 300px !important;
 	min-height: 40vh !important;
 	width: 100% !important;
-	
+} */
+
+#twitter-widget-0{
+	/*margin-top: -20px !important;*/
+	/*max-height: 300px !important;*/
+	min-height: 70vh !important;
+	width: 100% !important;
 }
 
-#twitter-widget-1{
+/* #twitter-widget-1{
 	margin-top: -5px !important;
 	min-height: 40vh !important;
 	height: auto !important;
-}
+} */
 
 .row .table-responsive{
 	overflow-x: hidden;

@@ -35,9 +35,15 @@
 		<div class="container theme-showcase">
 			<div class="row">
 				<div class="jumbotron col-sm-7">
-					<div class="hidden-xs"><h1>IEEEXtreme 9.0</h1></div>
-					<div class="visible-xs"><h2>IEEEXtreme 9.0</h2></div>
+					<div class="hidden-xs">
+					<h1>IEEEXtreme 9.0</h1>
 					<h2>Contest starts: <span id="countdown"></span></h2>
+					</div>
+					<div class="visible-xs">
+					<h2>IEEEXtreme 9.0</h2>
+					<h2>Contest starts: <span id="countdown-small"></span></h2>
+					</div>
+					
 					
 				</div>
 				
@@ -203,6 +209,7 @@
 				 
 				// get tag element
 				var countdown = $("#countdown");
+				var countdown_small = $("#countdown-small");
 				 
 				var start_counting = function () {
 			    // find the amount of "seconds" between now and target
@@ -222,6 +229,10 @@
 			    // format countdown string + set tag value
 			    countdown.html(days+ "d," + hours + "h, "
 			    + minutes + "m, " + seconds + "s");  
+				
+				
+				countdown_small.html(days+ "d," + hours + "h, "
+			    + minutes + "m");  
 				}
 
 				// update the tag with id "countdown" every 1 second

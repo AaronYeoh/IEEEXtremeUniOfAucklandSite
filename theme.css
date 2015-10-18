@@ -39,6 +39,6 @@ body {
 	height: auto !important;
 }
 
-.row{
+.row .table-responsive{
 	overflow-x: hidden;
 }

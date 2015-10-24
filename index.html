@@ -37,11 +37,11 @@
 				<div class="jumbotron col-sm-7">
 					<div class="hidden-xs">
 					<h1>IEEEXtreme 9.0</h1>
-					<h2>Contest starts: <span id="countdown"></span></h2>
+					<h2>Contest ends: <span id="countdown"></span></h2>
 					</div>
 					<div class="visible-xs">
 					<h2>IEEEXtreme 9.0</h2>
-					<h2>Contest starts: <span id="countdown-small"></span></h2>
+					<h2>Contest ends: <span id="countdown-small"></span></h2>
 					</div>
 					
 					
@@ -204,7 +204,7 @@
 				}, 5000);
 				// set the date we're counting down to
 				// Set the IEEE Xtreme Programming Competition End date
-				var target_date = new Date("13:00 Oct 24, 2015").getTime();
+				var target_date = new Date("13:00 Oct 25, 2015").getTime();
 				 
 				// variables for time units
 				var days, hours, minutes, seconds;
@@ -229,11 +229,11 @@
 			    seconds = parseInt(seconds_left % 60);
 			     
 			    // format countdown string + set tag value
-			    countdown.html(days+ "d," + hours + "h, "
+			    countdown.html(hours + "h, "
 			    + minutes + "m, " + seconds + "s");  
 				
 				
-				countdown_small.html(days+ "d," + hours + "h, "
+				countdown_small.html(hours + "h, "
 			    + minutes + "m");  
 				}
 

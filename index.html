@@ -240,7 +240,7 @@
 				}, 5000);
 				// set the date we're counting down to
 				// Set the IEEE Xtreme Programming Competition End date
-				var target_date = new Date("00:51 Oct 19, 2016").getTime();
+				var target_date = new Date("00:57 Oct 19, 2016").getTime();
 				 
 				// variables for time units
 				var days, hours, minutes, seconds;
@@ -255,35 +255,39 @@
 			    var seconds_left = (target_date - current_date) / 1000;
           
           if (seconds_left >= 0){			 
-			    // do some time calculations
-			    days = parseInt(seconds_left / 86400);
-			    seconds_left = seconds_left % 86400;
-			     
-			    hours = parseInt(seconds_left / 3600);
-			    seconds_left = seconds_left % 3600;
-			     
-			    minutes = parseInt(seconds_left / 60);
-			    seconds = parseInt(seconds_left % 60);
+            // do some time calculations
+            days = parseInt(seconds_left / 86400);
+            seconds_left = seconds_left % 86400;
+
+            hours = parseInt(seconds_left / 3600);
+            seconds_left = seconds_left % 3600;
+
+            minutes = parseInt(seconds_left / 60);
+            seconds = parseInt(seconds_left % 60);
+
+            if (days > 0){
+              countdown.html(days +"d, "+ hours + "h, "
+            + minutes + "m, " + seconds + "s");  
+
+              countdown_small.html(days + "d, "+hours + "h, "
+            + minutes + "m");  
+            }
+            else
+            {
+              // format countdown string + set tag value
+              countdown.html(hours + "h, "
+              + minutes + "m, " + seconds + "s");  
+
+              countdown_small.html(hours + "h, "
+            + minutes + "m");  
+            }
           }
           else {
             days = 0; hours = 0; minutes = 0; seconds=0;
-            countdown.style.color='DarkGreen'
+            countdown.style.color='darkgreen';
+            countdown.html("It's over! Well done everyone.");
           }
-          if (days > 0){
-            countdown.html(days +"d, "+ hours + "h, "
-			    + minutes + "m, " + seconds + "s");  
-            
-            countdown_small.html(days + "d, "+hours + "h, "
-			    + minutes + "m");  
-          }
-          else{
-            // format countdown string + set tag value
-            countdown.html(hours + "h, "
-            + minutes + "m, " + seconds + "s");  
-            
-            countdown_small.html(hours + "h, "
-			    + minutes + "m");  
-          }
+          
 
 
 				

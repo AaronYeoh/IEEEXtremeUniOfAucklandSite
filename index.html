@@ -243,7 +243,7 @@
 				}, 5000);
 				// set the date we're counting down to
 				// Set the IEEE Xtreme Programming Competition End date
-				var target_date = new Date("00:40 Oct 19, 2016").getTime();
+				var target_date = new Date("00:46 Oct 19, 2016").getTime();
 				 
 				// variables for time units
 				var days, hours, minutes, seconds;
@@ -270,14 +270,27 @@
           }
           else {
             days = 0; hours = 0; minutes = 0; seconds=0;
+            countdown.style.color='DarkGreen'
           }
-			    // format countdown string + set tag value
-			    countdown.html(hours + "h, "
+          if (days > 0){
+            countdown.html(days "d, "+ hours + "h, "
 			    + minutes + "m, " + seconds + "s");  
-				
-				
-				countdown_small.html(hours + "h, "
+            
+            countdown_small.html(days "d, "+hours + "h, "
 			    + minutes + "m");  
+          }
+          else{
+            // format countdown string + set tag value
+            countdown.html(hours + "h, "
+            + minutes + "m, " + seconds + "s");  
+            
+            countdown_small.html(hours + "h, "
+			    + minutes + "m");  
+          }
+
+
+				
+				
 				}
 
 				// update the tag with id "countdown" every 1 second
